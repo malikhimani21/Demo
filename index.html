@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form name="form1" onsubmit="return formValidations()" method="post">
+        Name : <input type="text" name="name" /><br /><br />
+        Email : <input type="email" name="email" /><br /><br />
+        <input type="submit" value="Send">
+    </form>
+
+    <script>
+
+        function formValidations() {
+            var i = document.forms["form1"]["name"].value;
+            if (i == "") {
+                alert("Name is required...");
+                return false;
+            }
+
+            var j = document.forms["form1"]["email"].value;
+            if (j == "") {
+                alert("Email is required...");
+                return false;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
